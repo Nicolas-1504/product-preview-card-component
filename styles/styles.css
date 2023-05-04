@@ -1,0 +1,135 @@
+@import "theme.css";
+
+.body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+}
+
+.card {
+  background-color: var(--white);
+  width: 20rem;
+  border-radius: 8px;
+}
+
+.container-image-desktop {
+  display: none;
+}
+
+.image-desktop {
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.container-image-mobile {
+  display: block;
+  height: 200px;
+}
+
+.image-mobile {
+  border-radius: 8px 8px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  margin: 20px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--darkGrayishBlue);
+}
+
+.subtitle {
+  font-family: "Fraunces", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--veryDarkBlue);
+  margin-top: 10px;
+}
+
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--darkGrayishBlue);
+  margin-top: 10px;
+}
+
+.prices {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 20px;
+}
+
+.new-price {
+  font-size: 26px;
+  font-family: "Fraunces", sans-serif;
+  color: var(--darkCyan);
+}
+
+.old-price {
+  font-family: "Montserrat", sans-serif;
+  color: var(--darkGrayishBlue);
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.button {
+  background-color: var(--darkCyan);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 46px;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: var(--darkCyanHover);
+  cursor: pointer;
+}
+
+.button::before {
+  content: url("../images/icon-cart.svg");
+  margin-top: 5px;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 40rem;
+  }
+
+  .container-image-mobile {
+    display: none;
+  }
+
+  .container-image-desktop {
+    display: block;
+    width: 50%;
+  }
+
+  .content {
+    width: calc(50% - 60px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    margin: 30px;
+  }
+}
